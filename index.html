@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>ONE IDE</title>
+
 </head>
+
 <body>
 
-    <!-- ---Hero Section--- -->
-    <div class="hero">
-        <h1>Text To Speech <span>Converter</span> </h1>
-        <textarea placeholder="Write Something here..."></textarea>
+    <!-- ----Nav Bar---- -->
+    <nav>
+        <h1>ONE IDE </h1>
+        <div class="themes">
+            <div class="theme" onclick="changeTheme('dark')"></div>
+            <div class="theme" onclick="changeTheme('light')"></div>
+            <div class="theme" onclick="changeTheme('sky')"></div>
+        </div>
+    </nav>
 
-        <div class="row">
-            <select name="" id=""></select>
-            <button><img src="play.png" alt="">Litsen</button>
+    <!-- ----Main Content---- -->
+    <div class="container">
+
+        <!-- --Text Editor-- -->
+        <div class="left">
+            <label for="">HTML</label>
+            <textarea id="html-code" onkeyup="run()"></textarea>
+
+            <label for="">CSS</label>
+            <textarea id="css-code" onkeyup="run()"></textarea>
+
+            <label for="">JavaScript</label>
+            <textarea id="js-code" onkeyup="run()"></textarea>
+        </div>
+
+        <!-- --Output Screen-- -->
+        <div class="right">
+            <label for="">Output</label>
+            <iframe id="output"></iframe>
         </div>
     </div>
 
-    <!-- ----script---- -->
+    <!-- ----Script---- -->
     <script src="main.js"></script>
+
 </body>
+
 </html>
